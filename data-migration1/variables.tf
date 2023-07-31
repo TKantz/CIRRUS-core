@@ -3,7 +3,7 @@ variable "DEPLOY_NAME" {
 }
 
 variable "MATURITY" {
-  type = string
+  type    = string
   default = "dev"
 }
 
@@ -14,7 +14,7 @@ variable "provider_kms_key_id" {
 # Optional
 
 variable "lambda_subnet_ids" {
-  type = list(string)
+  type    = list(string)
   default = []
 }
 
@@ -25,8 +25,8 @@ variable "permissions_boundary_arn" {
 
 variable "rds_connection_heartbeat" {
   description = "If true, send a query to verify database connection is live on connection creation and retry on initial connection timeout.  Set to false if not using serverless RDS"
-  type    = bool
-  default = true
+  type        = bool
+  default     = true
 }
 
 variable "rds_security_group_id" {
